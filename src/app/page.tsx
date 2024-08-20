@@ -5,11 +5,13 @@ const fontSpeaceGrotesk = FontSpaceGrotesk({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <main className={cn(fontSpeaceGrotesk.className,"flex  min-h-screen flex-col items-start justify-center gap-8")}>
+    <main className={cn(fontSpeaceGrotesk.className,"flex   flex-col min-h-[calc(100vh-48px)] justify-start  lg:justify-center gap-8 pt-12 lg:pt-0")}>
+
+      <div  className="flex flex-col gap-3">
       <h1
         className="text-4xl lg:text-5xl font-bold text-light"
       >
-       Hello everone!<span>👋</span>
+       Hello! <span>👋</span>
       </h1>
       <h1
         className="text-4xl lg:text-5xl  font-bold bg-gradient-to-r from-primary via-secondary to-ternary inline-block text-transparent bg-clip-text"
@@ -26,6 +28,7 @@ export default function Home() {
         <span className="text-light"> I&#39;m a </span>
         Junior Software enginner
       </h1>
+      </div>
     </main>
   );
 }
