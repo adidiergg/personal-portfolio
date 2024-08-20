@@ -9,21 +9,29 @@ export default function Home() {
       <h1
         className={cn(
           fontSpeaceGrotesk.className,
-          "text-6xl font-bold bg-gradient-to-r from-primary via-secondary to-secondary inline-block text-transparent bg-clip-text"
+          "text-6xl font-bold text-light"
         )}
       >
-       <span className="text-light">Hi, my name is   </span>
+       Hello everone!<span>👋</span>
+      </h1>
+      <h1
+        className={cn(
+          fontSpeaceGrotesk.className,
+          "text-6xl font-bold bg-gradient-to-r from-primary via-secondary to-ternary inline-block text-transparent bg-clip-text"
+        )}
+      >
+       <span className="text-light">My name is   </span>
         Didier 
     
       </h1>
       <h1
         className={cn(
           fontSpeaceGrotesk.className,
-          "text-6xl font-bold bg-gradient-to-r from-primary via-secondary to-secondary inline-block text-transparent bg-clip-text"
+          "text-6xl font-bold  bg-gradient-to-r from-primary via-secondary to-ternary inline-block text-transparent bg-clip-text"
         )}
       >
-        <span className="text-light"> I'm a </span>
-        Junior Software enginner{" "}
+        <span className="text-light"> I&#39;m a </span>
+        Junior Software enginner
       </h1>
     </main>
   );
