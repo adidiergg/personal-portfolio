@@ -51,36 +51,36 @@ export const Canvas = () => {
     constructor() {
       this.style = COLORS[Math.floor(range(0, 3))];
       this.rgb = `rgba(${this.style[0]},${this.style[1]},${this.style[2]}`;
-      this.r = Math.floor(range(10, 40));
+      this.r = Math.floor(range(25, 50));
       this.r2 = 2 * this.r;
       this.opacity = 0;
       this.dop = 0.001 * range(1, 3);
       this.x = range(-this.r2, width - this.r2);
-      this.y = range(-20, height - this.r2);
+      this.y = range(-this.r2, height - this.r2);
       this.xmax = width - this.r;
       this.ymax = height - this.r;
-      this.vx = Math.random() * 0.8;
-      this.vy = Math.random() * 0.8;
+      this.vx = Math.random() * 0.5;
+      this.vy = Math.random() * 0.5;
     }
 
     replace() {
       this.opacity = 0;
       this.dop = 0.001 * range(1, 3);
       this.x = range(-this.r2, width - this.r2);
-      this.y = range(-20, height - this.r2);
+      this.y = range(-this.r2, height - this.r2);
       this.xmax = width - this.r;
       this.ymax = height - this.r;
-      this.vx = Math.random() * 0.8;
-      this.vy = Math.random() * 0.8;
+      this.vx = Math.random() * 0.5;
+      this.vy = Math.random() * 0.5;
     }
 
     draw() {
       this.x += this.vx;
       this.y += this.vy;
       this.opacity += this.dop;
-      if (this.opacity > 0.5) {
-        this.opacity = 0.5;
-        this.dop *= -0.5;
+      if (this.opacity > 0.4) {
+        this.opacity = 0.4;
+        this.dop *= -0.4;
       }
       if (this.opacity < 0 || this.y > this.ymax) {
         this.replace();
@@ -109,8 +109,6 @@ export const Canvas = () => {
 
   useEffect(() => {
     window.addEventListener("resize", resizeWindow, false);
-    
-
     return () => {
       window.removeEventListener("resize", resizeWindow, false);
     };
@@ -126,15 +124,10 @@ export const Canvas = () => {
       context?.clearRect(0, 0, width, height);
       confetti.forEach((c) => c.draw());
     };
-
     render();
-    
-  
   }, [drawCircle]);
 
   return (
-   
-     <canvas ref={ref} className="fixed   -z-10" />
-     
+     <canvas ref={ref} className="fixed  -z-20" />
     );
 };

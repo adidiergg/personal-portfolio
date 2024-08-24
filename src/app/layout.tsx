@@ -18,7 +18,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased flex min-h-screen bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-[#020005] via-[#060607] to-black">
+      <body className=" antialiased flex min-h-screen bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-[#020005] via-[#060607] to-black">
+        <div className="fixed -z-10 h-full w-full backdrop-blur-lg"></div>
         <Canvas/>
         <Header />
         <main className="flex-1 px-16 pt-12 lg:px-40">{children}</main>
