@@ -16,7 +16,7 @@ export const Canvas = () => {
   const [height, setHeight] = useState<number>(0);
 
   
-  const drawCircle = (x, y, r, style) => {
+  const drawCircle = (x:number, y:number, r:number, style:string) => {
     const context = ref?.current?.getContext("2d");
     context.beginPath();
     context.arc(x, y, r, 0, PI_2, false);
