@@ -17,11 +17,19 @@ export const Canvas = () => {
 
   
   const drawCircle = (x:number, y:number, r:number, style:string) => {
-    const context = ref?.current?.getContext("2d");
-    context.beginPath();
-    context.arc(x, y, r, 0, PI_2, false);
-    context.fillStyle = style;
-    context.fill();
+    if (ref.current !== null) {
+      const context = ref?.current?.getContext("2d");{
+        if (context !== null){
+          context.beginPath();
+        context.arc(x, y, r, 0, PI_2, false);
+        context.fillStyle = style;
+        context.fill();
+        }
+        
+    }
+    }
+    
+
   };
   
 
