@@ -18,10 +18,12 @@ const config: Config = {
         primary: "rgb(var(--primary))",
         secondary: "rgb(var(--secondary))",
         ternary: "rgb(var(--ternary))"
-      }
+      },
     },
     
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-animated'),
+  ],
 };
 export default config;

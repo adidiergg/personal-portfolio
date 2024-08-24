@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@/styles/globals.css";
 import { Header } from "@/components/header";
+import { Canvas } from "@/components/canvas";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased flex min-h-screen bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-[#020005] via-[#060607] to-black">
+        <Canvas/>
         <Header />
         <main className="flex-1 px-16 pt-12 lg:px-40">{children}</main>
       </body>
