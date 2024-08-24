@@ -34,6 +34,10 @@ export const Canvas = () => {
   
 
   class Confetti {
+     rgb:string;
+     r:number;
+     r2:number;
+     style: number[];
     constructor() {
       this.style = COLORS[Math.floor(range(0, 3))];
       this.rgb = `rgba(${this.style[0]},${this.style[1]},${this.style[2]}`;
