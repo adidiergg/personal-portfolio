@@ -34,16 +34,33 @@ export const Canvas = () => {
   
 
   class Confetti {
-     rgb:string;
-     r:number;
-     r2:number;
-     style: number[];
+    rgb:string;
+    r:number;
+    r2:number;
+    style: number[];
+    opacity:number;
+    dop:number;
+    x:number;
+    y:number;
+    xmax:number;
+    ymax:number;
+    vx:number;
+    vy:number
+
+
     constructor() {
       this.style = COLORS[Math.floor(range(0, 3))];
       this.rgb = `rgba(${this.style[0]},${this.style[1]},${this.style[2]}`;
       this.r = Math.floor(range(10, 40));
       this.r2 = 2 * this.r;
-      this.replace();
+      this.opacity = 0;
+      this.dop = 0.001 * range(1, 3);
+      this.x = range(-this.r2, width - this.r2);
+      this.y = range(-20, height - this.r2);
+      this.xmax = width - this.r;
+      this.ymax = height - this.r;
+      this.vx = Math.random() * 0.8;
+      this.vy = Math.random() * 0.8;
     }
 
     replace() {
